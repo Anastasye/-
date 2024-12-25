@@ -1,0 +1,7 @@
+cd "C:\Users\admin\OneDrive\Рабочий стол\Labs\Hexxagon\x64\Debug\"
+hexxagon.exe "C:\Users\admin\OneDrive\Рабочий стол\Labs\Hexxagon\start.txt" "C:\Users\admin\OneDrive\Рабочий стол\Labs\Hexxagon\output.txt"
+
+
+
+
+

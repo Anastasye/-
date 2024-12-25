@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hexxagon: Класс GameBoard</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Hexxagon
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_game_board-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс GameBoard</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="hexxagon_8h_source.html">hexxagon.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac622cadcc81b3ffb71d8feb4506c04ac" id="r_ac622cadcc81b3ffb71d8feb4506c04ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac622cadcc81b3ffb71d8feb4506c04ac">GameBoard</a> ()</td></tr>
+<tr class="separator:ac622cadcc81b3ffb71d8feb4506c04ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46e08821f508813f953a5f4ea5216cf4" id="r_a46e08821f508813f953a5f4ea5216cf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46e08821f508813f953a5f4ea5216cf4">initializeBoard</a> (int newSize)</td></tr>
+<tr class="memdesc:a46e08821f508813f953a5f4ea5216cf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализирует игровое поле заданного размера.  <br /></td></tr>
+<tr class="separator:a46e08821f508813f953a5f4ea5216cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad17a34b9127c79f21648cf8585be9ab8" id="r_ad17a34b9127c79f21648cf8585be9ab8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad17a34b9127c79f21648cf8585be9ab8">loadGameState</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:ad17a34b9127c79f21648cf8585be9ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загружает состояние игры из файла.  <br /></td></tr>
+<tr class="separator:ad17a34b9127c79f21648cf8585be9ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0284e1026fea2b760afa2e6d9c436012" id="r_a0284e1026fea2b760afa2e6d9c436012"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0284e1026fea2b760afa2e6d9c436012">printBoard</a> () const</td></tr>
+<tr class="memdesc:a0284e1026fea2b760afa2e6d9c436012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печатает текущее состояние игрового поля.  <br /></td></tr>
+<tr class="separator:a0284e1026fea2b760afa2e6d9c436012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab07cece44660207c4173063e77741aa3" id="r_ab07cece44660207c4173063e77741aa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab07cece44660207c4173063e77741aa3">saveGame</a> (const std::string &amp;filename) const</td></tr>
+<tr class="memdesc:ab07cece44660207c4173063e77741aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохраняет текущее состояние игры в файл.  <br /></td></tr>
+<tr class="separator:ab07cece44660207c4173063e77741aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2200ccab4e48009e33b0ff3d10ebff58" id="r_a2200ccab4e48009e33b0ff3d10ebff58"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2200ccab4e48009e33b0ff3d10ebff58">doubleChip</a> (char chip, int row, int column)</td></tr>
+<tr class="memdesc:a2200ccab4e48009e33b0ff3d10ebff58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удваивает фишку на указанной позиции.  <br /></td></tr>
+<tr class="separator:a2200ccab4e48009e33b0ff3d10ebff58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc5e02f324e33d2dba9e850e9acb440f" id="r_acc5e02f324e33d2dba9e850e9acb440f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc5e02f324e33d2dba9e850e9acb440f">moveChip</a> (int sourceRow, int sourceColumn, int targetRow, int targetColumn, char currentPlayer)</td></tr>
+<tr class="memdesc:acc5e02f324e33d2dba9e850e9acb440f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перемещает фишку с одной позиции на другую.  <br /></td></tr>
+<tr class="separator:acc5e02f324e33d2dba9e850e9acb440f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a062e8218c7037be4eea2ea468d2a3db6" id="r_a062e8218c7037be4eea2ea468d2a3db6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a062e8218c7037be4eea2ea468d2a3db6">computerMove</a> (char computerChip)</td></tr>
+<tr class="memdesc:a062e8218c7037be4eea2ea468d2a3db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет ход компьютера.  <br /></td></tr>
+<tr class="separator:a062e8218c7037be4eea2ea468d2a3db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1ad538a516f32086a876825db9049a" id="r_a3d1ad538a516f32086a876825db9049a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d1ad538a516f32086a876825db9049a">hasChips</a> (char chip) const</td></tr>
+<tr class="memdesc:a3d1ad538a516f32086a876825db9049a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, есть ли фишки заданного типа на доске.  <br /></td></tr>
+<tr class="separator:a3d1ad538a516f32086a876825db9049a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0627734d4af3ab767e6e6b3bafdbad58" id="r_a0627734d4af3ab767e6e6b3bafdbad58"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0627734d4af3ab767e6e6b3bafdbad58">isMoveValid</a> (int targetRow, int targetColumn) const</td></tr>
+<tr class="memdesc:a0627734d4af3ab767e6e6b3bafdbad58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, является ли перемещение допустимым.  <br /></td></tr>
+<tr class="separator:a0627734d4af3ab767e6e6b3bafdbad58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96718a42efea4cbdb9f92aab629c1e3" id="r_ae96718a42efea4cbdb9f92aab629c1e3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae96718a42efea4cbdb9f92aab629c1e3">getValidMoves</a> (int row, int column) const</td></tr>
+<tr class="memdesc:ae96718a42efea4cbdb9f92aab629c1e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает все допустимые ходы для фишки на заданной позиции.  <br /></td></tr>
+<tr class="separator:ae96718a42efea4cbdb9f92aab629c1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7a0b1e6fe5801ed887f2990fdc8131" id="r_abd7a0b1e6fe5801ed887f2990fdc8131"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd7a0b1e6fe5801ed887f2990fdc8131">hasAvailableMoves</a> (char playerChip) const</td></tr>
+<tr class="memdesc:abd7a0b1e6fe5801ed887f2990fdc8131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, есть ли доступные ходы для игрока.  <br /></td></tr>
+<tr class="separator:abd7a0b1e6fe5801ed887f2990fdc8131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2e2a6276c3edd0936838c5aaeb9c9c" id="r_ada2e2a6276c3edd0936838c5aaeb9c9c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada2e2a6276c3edd0936838c5aaeb9c9c">isFull</a> ()</td></tr>
+<tr class="memdesc:ada2e2a6276c3edd0936838c5aaeb9c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, заполнено ли игровое поле.  <br /></td></tr>
+<tr class="separator:ada2e2a6276c3edd0936838c5aaeb9c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da8c27707b1ec9aa319534db8ec59a5" id="r_a8da8c27707b1ec9aa319534db8ec59a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8da8c27707b1ec9aa319534db8ec59a5">countChips</a> (char chip)</td></tr>
+<tr class="memdesc:a8da8c27707b1ec9aa319534db8ec59a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Считает количество фишек заданного типа на поле.  <br /></td></tr>
+<tr class="separator:a8da8c27707b1ec9aa319534db8ec59a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e205794b03501fd4f1500c38f67d4be" id="r_a8e205794b03501fd4f1500c38f67d4be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e205794b03501fd4f1500c38f67d4be">isValidMove</a> (int targetRow, int targetColumn)</td></tr>
+<tr class="memdesc:a8e205794b03501fd4f1500c38f67d4be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, является ли перемещение допустимым.  <br /></td></tr>
+<tr class="separator:a8e205794b03501fd4f1500c38f67d4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac622cadcc81b3ffb71d8feb4506c04ac" name="ac622cadcc81b3ffb71d8feb4506c04ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac622cadcc81b3ffb71d8feb4506c04ac">&#9670;&#160;</a></span>GameBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameBoard::GameBoard </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a062e8218c7037be4eea2ea468d2a3db6" name="a062e8218c7037be4eea2ea468d2a3db6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a062e8218c7037be4eea2ea468d2a3db6">&#9670;&#160;</a></span>computerMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameBoard::computerMove </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>computerChip</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выполняет ход компьютера. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">computerChip</td><td>Символ фишки компьютера. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8da8c27707b1ec9aa319534db8ec59a5" name="a8da8c27707b1ec9aa319534db8ec59a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da8c27707b1ec9aa319534db8ec59a5">&#9670;&#160;</a></span>countChips()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameBoard::countChips </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>chip</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Считает количество фишек заданного типа на поле. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chip</td><td>Тип фишки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Количество фишек заданного типа. </dd></dl>
+
+</div>
+</div>
+<a id="a2200ccab4e48009e33b0ff3d10ebff58" name="a2200ccab4e48009e33b0ff3d10ebff58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2200ccab4e48009e33b0ff3d10ebff58">&#9670;&#160;</a></span>doubleChip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameBoard::doubleChip </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>chip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>column</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удваивает фишку на указанной позиции. </p>
+<p>Функция проверяет, можно ли удвоить фишку на заданной позиции. Если фишка успешно удвоена, захватываются фишки противника, находящиеся рядом с новой фишкой.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chip</td><td>Символ фишки, которую нужно удвоить. </td></tr>
+    <tr><td class="paramname">row</td><td>Номер строки, где находится фишка (1-индексированный). </td></tr>
+    <tr><td class="paramname">column</td><td>Номер столбца, где находится фишка (1-индексированный). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true Если фишка успешно удвоена. </dd>
+<dd>
+false Если произошла ошибка при удвоении фишки. </dd></dl>
+
+</div>
+</div>
+<a id="ae96718a42efea4cbdb9f92aab629c1e3" name="ae96718a42efea4cbdb9f92aab629c1e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae96718a42efea4cbdb9f92aab629c1e3">&#9670;&#160;</a></span>getValidMoves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::pair&lt; int, int &gt; &gt; GameBoard::getValidMoves </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>column</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получает все допустимые ходы для фишки на заданной позиции. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>Номер строки, где находится фишка. </td></tr>
+    <tr><td class="paramname">column</td><td>Номер столбца, где находится фишка. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>std::vector&lt;std::pair&lt;int, int&gt;&gt; Список допустимых ходов в формате (строка, столбец). </dd></dl>
+
+</div>
+</div>
+<a id="abd7a0b1e6fe5801ed887f2990fdc8131" name="abd7a0b1e6fe5801ed887f2990fdc8131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd7a0b1e6fe5801ed887f2990fdc8131">&#9670;&#160;</a></span>hasAvailableMoves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameBoard::hasAvailableMoves </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>playerChip</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет, есть ли доступные ходы для игрока. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerChip</td><td>Фишка игрока. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true Если есть доступные ходы. </dd>
+<dd>
+false Если доступных ходов нет. </dd></dl>
+
+</div>
+</div>
+<a id="a3d1ad538a516f32086a876825db9049a" name="a3d1ad538a516f32086a876825db9049a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d1ad538a516f32086a876825db9049a">&#9670;&#160;</a></span>hasChips()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameBoard::hasChips </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>chip</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет, есть ли фишки заданного типа на доске. </p>
+<p>Функция проходит по всей доске и проверяет наличие фишек указанного типа.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chip</td><td>Символ фишки, которую нужно проверить. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true Если фишки найдены. </dd>
+<dd>
+false Если фишки не найдены. </dd></dl>
+
+</div>
+</div>
+<a id="a46e08821f508813f953a5f4ea5216cf4" name="a46e08821f508813f953a5f4ea5216cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46e08821f508813f953a5f4ea5216cf4">&#9670;&#160;</a></span>initializeBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameBoard::initializeBoard </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>newSize</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициализирует игровое поле заданного размера. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newSize</td><td>Новый размер игрового поля. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ada2e2a6276c3edd0936838c5aaeb9c9c" name="ada2e2a6276c3edd0936838c5aaeb9c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2e2a6276c3edd0936838c5aaeb9c9c">&#9670;&#160;</a></span>isFull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameBoard::isFull </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет, заполнено ли игровое поле. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true Если поле заполнено. </dd>
+<dd>
+false Если поле не заполнено. </dd></dl>
+
+</div>
+</div>
+<a id="a0627734d4af3ab767e6e6b3bafdbad58" name="a0627734d4af3ab767e6e6b3bafdbad58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0627734d4af3ab767e6e6b3bafdbad58">&#9670;&#160;</a></span>isMoveValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameBoard::isMoveValid </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>column</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет, является ли перемещение допустимым. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>Номер строки для проверки. </td></tr>
+    <tr><td class="paramname">column</td><td>Номер столбца для проверки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true Если перемещение допустимо. </dd>
+<dd>
+false Если перемещение недопустимо. </dd></dl>
+
+</div>
+</div>
+<a id="a8e205794b03501fd4f1500c38f67d4be" name="a8e205794b03501fd4f1500c38f67d4be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e205794b03501fd4f1500c38f67d4be">&#9670;&#160;</a></span>isValidMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameBoard::isValidMove </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>targetRow</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>targetColumn</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет, является ли перемещение допустимым. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targetRow</td><td>Целевая строка. </td></tr>
+    <tr><td class="paramname">targetColumn</td><td>Целевая колонка. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true Если перемещение допустимо. </dd>
+<dd>
+false Если перемещение недопустимо. </dd></dl>
+
+</div>
+</div>
+<a id="ad17a34b9127c79f21648cf8585be9ab8" name="ad17a34b9127c79f21648cf8585be9ab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad17a34b9127c79f21648cf8585be9ab8">&#9670;&#160;</a></span>loadGameState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameBoard::loadGameState </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загружает состояние игры из файла. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Имя файла для загрузки состояния игры. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acc5e02f324e33d2dba9e850e9acb440f" name="acc5e02f324e33d2dba9e850e9acb440f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc5e02f324e33d2dba9e850e9acb440f">&#9670;&#160;</a></span>moveChip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameBoard::moveChip </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sourceRow</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sourceColumn</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>targetRow</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>targetColumn</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>currentPlayer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перемещает фишку с одной позиции на другую. </p>
+<p>Функция проверяет, можно ли переместить фишку с исходной позиции на целевую. Если перемещение допустимо, фишка перемещается, и захватываются фишки противника.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceRow</td><td>Номер строки исходной позиции (1-индексированный). </td></tr>
+    <tr><td class="paramname">sourceColumn</td><td>Номер столбца исходной позиции (1-индексированный). </td></tr>
+    <tr><td class="paramname">targetRow</td><td>Номер строки целевой позиции (1-индексированный). </td></tr>
+    <tr><td class="paramname">targetColumn</td><td>Номер столбца целевой позиции (1-индексированный). </td></tr>
+    <tr><td class="paramname">currentPlayer</td><td>Символ текущего игрока. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true Если перемещение успешно. </dd>
+<dd>
+false Если произошла ошибка при перемещении. </dd></dl>
+
+</div>
+</div>
+<a id="a0284e1026fea2b760afa2e6d9c436012" name="a0284e1026fea2b760afa2e6d9c436012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0284e1026fea2b760afa2e6d9c436012">&#9670;&#160;</a></span>printBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameBoard::printBoard </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Печатает текущее состояние игрового поля. </p>
+
+</div>
+</div>
+<a id="ab07cece44660207c4173063e77741aa3" name="ab07cece44660207c4173063e77741aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab07cece44660207c4173063e77741aa3">&#9670;&#160;</a></span>saveGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameBoard::saveGame </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сохраняет текущее состояние игры в файл. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Имя файла для сохранения состояния игры. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="hexxagon_8h_source.html">hexxagon.h</a></li>
+<li><a class="el" href="hexxagon_8cpp.html">hexxagon.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

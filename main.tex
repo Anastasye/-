@@ -1,0 +1,568 @@
+\documentclass[a4paper]{article}
+\usepackage{calc,amsmath,amssymb,amsfonts}
+\usepackage[T2A,LGR,T1]{fontenc}
+\usepackage[greek,english,russian]{babel}
+\usepackage{xcolor,longfbox,fancyhdr}
+\usepackage[top=0.7874in,bottom=0.4917in,left=1.1811in,right=0.5902in,nohead,includefoot,foot=0.2957in,footskip=0.55200005in]{geometry}
+\usepackage{array,supertabular,hhline,enumitem,hyperref}
+\usepackage{setspace} 
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\hypersetup{colorlinks=true,allcolors=blue,pdfauthor=Машкова Анастасия}
+\usepackage[pdftex]{graphicx}
+
+\begin{document}
+
+
+\begin{center}
+    {МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ} \\
+    федеральное государственное автономное образовательное учреждение высшего образования \\
+    {«САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ АЭРОКОСМИЧЕСКОГО ПРИБОРОСТРОЕНИЯ»} \\
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{center}
+    {КАФЕДРА 25} \\
+\end{center}
+
+\vspace{1cm}
+
+\begin{flushleft}
+    КУРСОВАЯ РАБОТА (ПРОЕКТ) \\
+    ЗАЩИЩЕНА С ОЦЕНКОЙ \\
+\end{flushleft}
+
+\begin{flushleft}
+    РУКОВОДИТЕЛЬ \\
+    \underline{Доцент, канд. техн. наук} 
+    \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \underline{Е. М. Линский}\\
+    должность, уч. степень, звание 
+    \qquad \qquad \qquad \qquad\underline{подпись, дата}
+    \qquad \qquad \qquad \qquad \qquad инициалы, фамилия
+\end{flushleft}
+
+\vspace{1cm}
+
+\begin{center}
+    ПОЯСНИТЕЛЬНАЯ ЗАПИСКА\\
+    К КУРСОВОЙ РАБОТЕ \\
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+    ИГРА В ХЕКСАГОН (ГЕКСАГОН) \\
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+    по дисциплине:
+    ОСНОВЫ ПРОГРАММИРОВАНИЯ
+\end{center}
+
+\vspace{4cm}
+
+\begin{flushleft}
+    РАБОТУ ВЫПОЛНИЛ \\
+    СТУДЕНТ гр. № 2354 
+    \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad\qquad 
+    \underline{А.И. Машкова} \\
+    \qquad \qquad \qquad \qquad\qquad \qquad \qquad \qquad\qquad \qquad \quad \underline{подпись, дата}
+    \qquad \qquad \qquad \qquad \qquad инициалы, фамилия
+\end{flushleft}
+
+\vspace{3cm}
+
+\begin{center}
+    Санкт-Петербург 2024
+\end{center}
+
+\vspace{2cm}
+
+ \thispagestyle{empty}
+
+\tableofcontents 
+
+\newpage 
+
+\begin{center}
+   \section{Постановка задачи} 
+\end{center}
+
+Задачей данной курсовой работы является разработка программы, которая реализует игру
+{\textquotedbl}Hexxagon{\textquotedbl} $\text{\textgreek{—}}$ стратегическую настольную игру, предназначенная для двух
+игроков или против компьютера. Игровой процесс представляет собой шестиугольное игровое поле, на котором каждый игрок
+имеет возможность управлять своими фишками, с целью захвата и удержания чужих фишек, чтобы в итоге одержать победу.
+
+Игровое поле имеет размеры, варьирующиеся в зависимости от выбора игрока, и состоит из ячеек, каждая из которых может
+быть пустой или заполненной фишкой одного из игроков ('R' для красного и 'B' для синего). Игра состоит из следующих
+действий: перемещение, удвоение, захват. Игра завершается, когда один из игроков больше не может сделать ход, либо все
+фишки одного из игроков будут захвачены, либо при заполнение всего поля.
+
+Данная задача была рассмотрена и реализована в соответствии с работой Ч. Уэзерелла \hyperlink{mytextlabel1}{[1]}.
+
+Для демонстрации актуальности задачи разработки программы {\textquotedbl}Hexxagon{\textquotedbl} можно привести
+следующие примеры:
+
+1.Игровое поле \ с начальным расположением фишек представлено на рисунке [1].
+
+{\centering
+\ \ \ \ \ \ 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.19\linewidth]{a0000-img001.png}
+    \end{figure}
+
+\par}
+
+{\centering
+Рисунок 1 – Визуализация игрового поля 1
+
+\par}
+
+
+В реализации {\textquotedbl}-{\textquotedbl} - это представление пустых ячеек. Игрок, имеющий возможность сделать ход,
+проверяет возможности захвата фишек противника и, тем самым, создает собственное преимущество на поле.
+
+2.После нескольких ходов состояние игрового поля представлено на рисунке [2].
+
+{\centering
+\ \ \ \ \ \ 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.19\linewidth]{a0000-img002.png}
+     \end{figure}
+
+\par}
+
+{\centering
+Рисунок 2 - Визуализация игрового поля 2
+\par}
+
+На данном поле красный игрок может захватить фишку синего игрока (B) с помощью одного удачного хода, продемонстрировав
+стратегическую глубину игры.
+
+С помощью таких примеров видно, что задача разработки программы {\textquotedbl}Hexxagon{\textquotedbl} имеет
+практическое применение, позволяя игрокам анализировать и разрабатывать стратегии, взаимодействуя с игрой и друг с
+другом.\newline
+
+\newpage 
+
+\begin{center}
+   \section{Алгоритм} 
+\end{center}
+
+Алгоритм игры {\textquotedbl}Hexxagon{\textquotedbl} основан на механике управления состоянием игрового поля и проверке
+допустимости ходов, а также на выполнении действий. Основная идея алгоритма заключается в том, чтобы обеспечить
+возможность игрокам выполнять свои ходы, проверяя при этом, являются ли эти ходы, разрешёнными согласно правилам игры
+\hyperlink{mytextlabel}{[2]}.
+
+Алгоритм включает в себя следующие ключевые компоненты:
+
+\begin{itemize}[series=listWWNumvii,label=$\cdot $]
+\item Структура данных: Игровое поле представлено в виде двумерного вектора, где каждая ячейка может содержать символ,
+обозначающий фишку игрока ('R' или 'B'), или быть пустой ('{\textbackslash}0'). Размер поля определяется переменной,
+которая указывает на количество строк и столбцов.
+\item Инициализация: Алгоритм начинается с инициализации игрового поля, где он считывает поле из файла.
+\item Игровой цикл: В процессе игры алгоритм последовательно запрашивает ход текущего игрока, проверяет его допустимость
+и выполняет, если он допустим. Если ход недопустим, игроку предлагается повторить попытку.
+\item Проверка состояния игры: Алгоритм также проверяет, остались ли доступные ходы у противника, и завершает игру, если
+у одного из игроков не осталось доступных ходов.
+\end{itemize}
+\newpage 
+
+\begin{center}
+    \subsection{Пошаговый пример для алгоритма}
+\end{center}
+
+В данном подразделе рассмотрим выполнение алгоритма на примере с игровым поле с размером 3. Визуализация игрового поля
+представлена на рисунке [3].
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.19\linewidth]{a0000-img003.png}
+    \end{figure}
+\par
+{\centering
+Рисунок 3 – Игровое поле размером 3
+\par}
+
+Шаги алгоритма.
+
+1 шаг: 
+
+Игрок 'R' пытается удвоить фишку на позиции (1, 3) на соседнюю пустую ячейку (1, 2), захватывая фишку противника на (1,
+1). Алгоритм проверяет возможно ли такое действие. Удвоение фишки осуществляется только на соседние ячейки от выбранной
+позиции, игрок правильно ввел все координаты, а также смог захватить фишку другого игрока. Алгоритм представляет
+новое состояние поля на рисунке [4].
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.19\linewidth]{a0000-img004.png}
+    \end{figure}
+\par
+{\centering
+Рисунок 4 – Состояние игрового поля после 1 шага
+\par}
+
+2 шаг:
+
+Алгоритм проверяет остались ли фишки и доступные ходы у игроков. Игра продолжается, потому что игроки имеют фишки и
+доступные ходы. Игрок 'B' выбирает перемещение фишки с позиции (7, 1) на (5, 3). \ Алгоритм проводит проверку на
+возможность такого действия. Перемещение фишки выполняется только через одну ячейку от выбранной позиции, игрок
+правильно ввел все координаты. Алгоритм представляет новое состояние поля на рисунке [5].
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.19\linewidth]{a0000-img005.png}
+    \end{figure}  
+\par
+{\centering
+Рисунок 5 – Состояние игрового поля после 2 шага
+\par}
+
+
+3 шаг:
+
+Алгоритм проверяет остались ли фишки и доступные ходы у игроков. Игра продолжается, потому что игроки имеют фишки и
+доступные ходы. Игрок 'R' пытается удвоить фишку на позиции (7, 3) на соседнюю пустую ячейку (6, 3), захватывая фишку
+противника на (5, 3). Алгоритм аналогично проверяет возможность удвоения. Игрок правильно ввел все координаты, а также
+смог захватить фишку другого игрока. Алгоритм представляет новое состояние поля на рисунке [6].
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.19\linewidth]{a0000-img006.png}
+    \end{figure} 
+\par
+{\centering
+Рисунок 6 – Состояние игрового поля после 3 шага
+\par}
+
+4 шаг:
+
+Алгоритм проверяет остались ли фишки и доступные ходы у игроков. Игра продолжается, потому что игроки имеют фишки и
+доступные ходы. Игрок 'B' пытается удвоить фишку на позиции (4, 6) на соседнюю пустую ячейку (4, 5). Алгоритм
+аналогично проверяет возможность удвоения. Игрок правильно ввел все координаты. Алгоритм представляет новое состояние
+поля на рисунке [7].
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.19\linewidth]{a0000-img007.png}
+    \end{figure} 
+\par
+{\centering
+Рисунок 7 - Состояние игрового поля после 4 шага
+\par}
+
+5 шаг:
+
+Игрок 'R' выбирает перемещение фишки с позиции (5, 3) на (5, 5), захватывая фишки противника на (4, 5), на (4, 6).
+Алгоритм аналогично проверяет возможность перемещения. Игрок правильно ввел все координаты,
+а также смог захватить фишки другого игрока. Алгоритм представляет новое состояние поля на рисунке [8].
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.19\linewidth]{a0000-img008.png}
+    \end{figure} 
+\par
+{\centering
+Рисунок 8 - Состояние игрового поля после 5 шага
+\par}
+
+6 шаг:
+
+Алгоритм проверяет остались ли фишки и доступные ходы у игроков, проанализировав поле, алгоритм завершает игру, потому
+что игрок $\text{\textgreek{‘}}$B$\text{\textgreek{’}}$ не владеет доступными фишками. Далее, алгоритм выводит
+результат игры и называет цвет победителя, в данной игре победил игрок $\text{\textgreek{‘}}$R$\text{\textgreek{’}}$.
+
+\newpage
+\begin{center}
+   \subsection{Псевдокод}
+\end{center}
+
+
+\begin{verbatim}
+void Game::start() {
+    gameBoard.loadGameState(inputFilename);
+    selectGameMode();
+
+    Пока (true) {
+        gameBoard.printBoard();
+       вывести "Ход игрока: " + (если текущий игрок 'R' тогда "R" иначе "B")l;
+
+        Если (!playerTurn()) {
+            gameBoard.saveGame(outputFilename);
+            break;
+        }
+
+        Если (!gameBoard.hasChips(currentPlayer == 'R' ? 'B' : 'R')) {
+            вывести "Игрок " + (если текущий игрок 'R' тогда "R" иначе "B") + " выиграл! Противник не имеет фишек!";
+            break;
+        }
+
+        Если (!gameBoard.hasAvailableMoves(currentPlayer) || !gameBoard.hasChips(currentPlayer)) {
+           вывести "Игрок " + (если текущий игрок 'R' тогда "R" иначе "B") + " не может сделать ход!"
+            вывести "Игра окончена! Победили " + (если текущий игрок 'R' тогда "синие!" иначе "красные!";
+            break;
+        }
+        Если (gameBoard.isFull()) {
+            int redChips = gameBoard.countChips('R');
+            int blueChips = gameBoard.countChips('B');
+            Если (redChips > blueChips) {
+                вывести "Игра окончена! Победили красные!";
+            }
+            Иначе если (blueChips > redChips) {
+               вывести "Игра окончена! Победили синие!";
+            }
+            Иначе {
+                вывести "Игра окончена! Ничья!";
+            }
+            break;
+        }
+
+        Если (gameMode == 2) { 
+            gameBoard.computerMove('B');
+
+            Если (!gameBoard.hasChips('B')) {
+                 вывести "Игрок R выиграл! Компьютер не имеет фишек!";
+                break;
+            }
+
+            Если (!gameBoard.hasAvailableMoves('B')) {
+               вывести "Компьютер не может сделать ход!";
+               вывести "Игра окончена! Победили красные!";
+                break;
+            }
+        }
+
+        switchPlayers();
+    }
+}
+\end{verbatim}
+
+
+Анализ сложности алгоритма
+
+\begin{itemize}[series=listWWNumxiii,label=$\cdot $]
+\item Инициализация: \textit{O}(\textit{n}\textsuperscript{2}), так как мы инициализируем двумерный массив, где n
+$\text{\textgreek{—}}$ размерность поля.
+\item Проверка допустимости хода: \textit{O}(1) для проверки конкретного хода, но \textit{O}(\textit{n}) в худшем
+случае, если нужно проверить все возможные ходы.
+\item Выполнение хода: \textit{O}(1) для перемещения фишки, но\textit{ O}(\textit{n}) в случае, если необходимо
+проверить соседние ячейки. 
+\end{itemize}
+В целом, общая временная сложность алгоритма можно оценить как \textit{O}(\textit{n}\textsuperscript{2}), учитывая, что
+наибольшее время потребует печать и инициализация игрового поля.
+\newpage 
+
+\begin{center}
+   \section{Инструкция пользователя} 
+\end{center}
+Для запуска программы {\textquotedbl}Hexxagon{\textquotedbl} необходимо использовать параметры командной строки.
+Программа принимает два аргумента:
+
+\begin{itemize}[series=listWWNumxxi,label=$\cdot $]
+\item Входной файл $\text{\textgreek{—}}$ файл с состоянием игры, который будет загружен при старте программы.
+\item Выходной файл $\text{\textgreek{—}}$ файл, в который будет сохранено состояние игры по завершении или в случае
+выхода.
+\end{itemize}
+Входной файл должен содержать информацию о состоянии игрового поля и инициализации игры. Формат входного файла выглядит
+следующим образом:
+
+\begin{itemize}[series=listWWNumxxii,label=$\cdot $]
+\item Первая строка: Целое число, указывающее размер игрового поля.
+\item Следующие строки: Определяют содержимое игрового поля с помощью символов:
+\end{itemize}
+{}'R' $\text{\textgreek{—}}$ фишка красного игрока
+
+{}'B' $\text{\textgreek{—}}$ фишка синего игрока
+
+{}'-' $\text{\textgreek{—}}$ пустая ячейка
+
+Выходной файл сохраняет текущее состояние игрового поля после завершения игры или при выходе из программы. Формат файла
+идентичен формату входного файла:
+
+\begin{itemize}[series=listWWNumxxiii,label=$\cdot $]
+\item Первая строка: Целое число, указывающее размер игрового поля.
+\item Следующие строки: Определяют текущее состояние игрового поля.
+\end{itemize}
+Таким образом, выходной файл позволяет сохранить и восстановить состояние игры для дальнейшего анализа или продолжения
+игры.
+\vspace{2cm}
+
+\newpage
+
+\begin{center}
+   \section{Текстовые примеры} 
+\end{center}
+
+\begin{enumerate}[series=listWWNumv,label=\texttt{\arabic*.},ref=\arabic*]
+\item Входные данные:
+\end{enumerate}
+\foreignlanguage{english}{start.txt:}
+
+\foreignlanguage{english}{5}
+
+\foreignlanguage{english}{\ \ \ \ B - - - R}
+
+\foreignlanguage{english}{\ \ \ {}- - - - - -}
+
+\foreignlanguage{english}{\ \ {}- - - - - - - }
+
+\foreignlanguage{english}{\ {}- - - - - - - - }
+
+\foreignlanguage{english}{R - - - - - - - B}
+
+\foreignlanguage{english}{\ {}- - - - - - - - }
+
+\foreignlanguage{english}{\ \ {}- - - - - - - }
+
+\foreignlanguage{english}{\ \ \ {}- - - - - -}
+
+\foreignlanguage{english}{\ \ \ \ B - - - R}
+
+Выходные данные:
+
+output.txt:
+
+5
+
+\ \ \ \ R R R R B
+
+\ \ \ R R - R R R
+
+\ \ {}- R R - R R R
+
+\ {}- R R - - - R R
+
+R - R R R R R R R
+
+\ {}- - - - - - - -
+
+\ \ {}- - - - - - -
+
+\ \ \ R R - - - -
+
+\ \ \ \ R R R - -
+
+Игрок B не может сделать ход!
+
+Игра окончена! Победили красные!
+
+
+
+\begin{enumerate}[resume*=listWWNumv]
+\item Входные данные:
+\end{enumerate}
+\foreignlanguage{english}{start.txt:}
+
+\foreignlanguage{english}{3}
+
+\foreignlanguage{english}{\ \ \ \ \ R - B }
+
+\foreignlanguage{english}{\ \ \ \ {}- - - - \ \ \ \ }
+
+\foreignlanguage{english}{\ \ \ B - - - R }
+
+\foreignlanguage{english}{\ \ \ \ {}- - - - }
+
+\foreignlanguage{english}{\ \ \ \ \ R - B}
+
+Выходные данные:
+
+output.txt:
+
+3
+
+R R R 
+
+{}- - - - 
+
+R R B R R 
+
+R B R R 
+
+B R B
+
+Игрок B не может сделать ход!
+
+Игра окончена! Победили красные!
+
+\begin{enumerate}[resume*=listWWNumv]
+\item Входные данные:
+\end{enumerate}
+\foreignlanguage{english}{start.txt:}
+
+\foreignlanguage{english}{4}
+
+\foreignlanguage{english}{\ \ \ R - - B}
+
+\foreignlanguage{english}{\ \ {}- - - - -}
+
+\foreignlanguage{english}{\ {}- - - - - -}
+
+\foreignlanguage{english}{B - - - - - R}
+
+\foreignlanguage{english}{\ {}- - - - - -}
+
+\foreignlanguage{english}{\ \ {}- - - - -}
+
+\foreignlanguage{english}{\ \ \ R - - B}
+
+Выходные данные:
+
+output.txt:
+
+4
+
+{}- - R R 
+
+{}- - - - - 
+
+{}- - - - - - 
+
+{}- - - - R R R 
+
+{}- - - - - - 
+
+{}- - - - - 
+
+{}- - R R 
+
+Игрок R выиграл! Противник не имеет фишек!
+
+\vspace{2cm}
+
+\newpage
+
+\begin{center}
+   \section{Список литературы} 
+\end{center}
+
+\vspace{1cm}
+
+\newcommand{\mytext}{%
+    \textnormal{Гексагон: Игра. - URL: }%
+}
+
+\newcommand{\mytext}{%
+    \textnormal{Этюды для программистов}%
+}
+
+[1]\qquadУэзерелл, Ч.
+\hypertarget{mytextlabel1}{%
+    Этюды для программистов / Ч. Уэзерелл, пер. с англ. Ю. Баяковского.} – М.: Мир 1982. —288с
+
+[2]\qquad\hypertarget{mytextlabel}{%
+    \mytext
+}
+\href {https://hexxagon.com}{https://hexxagon.com} (дата обращения : 10.12.2024)
+
+\end{document}
